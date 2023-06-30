@@ -1,0 +1,18 @@
+project:
+  type: book
+
+book:
+  title: "Introduction to Modern Causal Inference"
+  author: "Lorenzo Fabbri"
+  date: "6/30/2023"
+  chapters:
+    - index.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
