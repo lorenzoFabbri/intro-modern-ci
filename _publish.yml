@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: 5ee29241-579d-4c68-b4fa-c564bc803ce4
+      url: 'https://lorenzof.quarto.pub/introduction-to-modern-causal-inference'
