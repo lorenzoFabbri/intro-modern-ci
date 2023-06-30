@@ -3,11 +3,21 @@ project:
 
 book:
   title: "Introduction to Modern Causal Inference"
-  author: "Lorenzo Fabbri"
-  date: "6/30/2023"
+  author:
+    - name: Alejandro Schuler
+    - name: Mark van der Laan
+  search: true
+  downloads: [pdf]
+  sharing: [twitter]
+  cover-image: cover.png
   chapters:
     - index.qmd
+    - inference_and_statistics.qmd
+    - causality_and_identification.qmd
+    - efficiency_theory.qmd
+    - building_efficient_estimators.qmd
     - references.qmd
+  page-navigation: true
 
 bibliography: references.bib
 
