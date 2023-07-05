@@ -20,9 +20,11 @@ book:
   page-navigation: true
 
 bibliography: references.bib
+csl: apa.csl
 
 format:
   html:
     theme: cosmo
+    html-math-method: mathjax
   pdf:
     documentclass: scrreprt

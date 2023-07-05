@@ -93,7 +93,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Goals and Approach</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -125,7 +125,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
+ <span class="menu-text">Goals and Approach</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -168,11 +168,17 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <li><a href="#goals-and-approach" id="toc-goals-and-approach" class="nav-link active" data-scroll-target="#goals-and-approach">Goals and Approach</a>
   <ul class="collapse">
-  <li><a href="#goals-and-approach" id="toc-goals-and-approach" class="nav-link" data-scroll-target="#goals-and-approach">Goals and Approach</a></li>
   <li><a href="#philosophy" id="toc-philosophy" class="nav-link" data-scroll-target="#philosophy">Philosophy</a></li>
+  <li><a href="#pedagogy" id="toc-pedagogy" class="nav-link" data-scroll-target="#pedagogy">Pedagogy</a>
+  <ul class="collapse">
+  <li><a href="#rigor-with-fewer-prerequisites" id="toc-rigor-with-fewer-prerequisites" class="nav-link" data-scroll-target="#rigor-with-fewer-prerequisites">Rigor with Fewer Prerequisites</a></li>
+  <li><a href="#core-concepts" id="toc-core-concepts" class="nav-link" data-scroll-target="#core-concepts">Core Concepts</a></li>
   </ul></li>
+  </ul></li>
+  <li><a href="#topics" id="toc-topics" class="nav-link" data-scroll-target="#topics">Topics</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
   </ul>
 </nav>
     </div>
@@ -203,30 +209,94 @@ div.csl-indent {
 
 </header>
 
+<p><img src="cover.png" title="Introduction to Modern Causal Inference" class="quarto-cover-image img-fluid"></p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1><p><img src="cover.png" title="Introduction to Modern Causal Inference" class="quarto-cover-image img-fluid"></p>
-<section id="goals-and-approach" class="level2">
-<h2 class="anchored" data-anchor-id="goals-and-approach">Goals and Approach</h2>
-<p>Our goal is to get people with any amount of experience in formal mathematics past undergraduate probability to be able to take a vaguely-defined scientific question, translate it into a formal statistical problem, and solve it by constructing a tool that is optimal for the job at hand. This book is not particularly original! There are many texts and courses that share the same philosophy and have substantial overlap in terms of the pedagogic approach and topics. In particular, we owe a lot to the biostatistics curriculum at UC Berkeley and to more encyclopedic texts like <span class="citation" data-cites="van2011targeted">(<a href="references.html#ref-van2011targeted" role="doc-biblioref">Van der Laan, Rose, et al. 2011</a>)</span>. Nonetheless, we think that the particular selection of topics and tone in this book will make the content accessible enough to new audiences that it’s worthwhile to recombine the material in this way. Think of this book as just another open window into the exciting world of modern causal inference.</p>
-</section>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This book is a <strong>work in-progress</strong>! Everything about it is subject to change.</p>
+</div>
+</div>
+<section id="goals-and-approach" class="level1 unnumbered">
+<h1 class="unnumbered">Goals and Approach</h1>
+<p>Our goal is to get people with any amount of experience in formal mathematics past undergraduate probability to be able to take a vaguely-defined scientific question, translate it into a formal statistical problem, and solve it by constructing a tool that is optimal for the job at hand.</p>
+<p>This book is not particularly original! There are many texts and courses that share the same philosophy and have substantial overlap in terms of the pedagogic approach and topics. In particular, we owe a lot to the biostatistics curriculum at UC Berkeley and to more encyclopedic texts like <span class="citation" data-cites="van2011targeted">Van der Laan et al. (<a href="references.html#ref-van2011targeted" role="doc-biblioref">2011</a>)</span>. Nonetheless, we think that the particular selection of topics and tone in this book will make the content accessible enough to new audiences that it’s worthwhile to recombine the material in this way. Think of this book as just another open window into the exciting world of modern causal inference.</p>
 <section id="philosophy" class="level2">
 <h2 class="anchored" data-anchor-id="philosophy">Philosophy</h2>
 <p>This book is rooted in the philosophy of modern causal inference. What sets this philosophy apart are the three following tenets:</p>
 <ol type="1">
-<li>The first is that for all practical purposes, <strong>the point of statistics is causal inference</strong>. Ultimately, we humans are concerned with how to make decisions under uncertainty that lead to the best outcome. These are fundamentally causal questions that ask <em>what if</em> we did A instead of B? The machinery of statistical inference is agnostic to causality, but that doesn’t change the fact that our motivation in using it isn’t. Therefore there is little point in shying away from causal claims because noncausal claims are not often of any practical utility.</li>
+<li>The first is that for all practical purposes, <strong>the point of statistics <em>is</em> causal inference</strong>. Ultimately, we humans are concerned with how to make decisions under uncertainty that lead to the best outcome. These are fundamentally causal questions that ask <em>what if</em> we did A instead of B? The machinery of statistical inference is agnostic to causality, but that doesn’t change the fact that our motivation in using it isn’t. Therefore there is little point in shying away from causal claims because noncausal claims are not often of any practical utility.</li>
 <li>That leads to the second, often misunderstood point, which is that <strong>there is no such thing as a method for causal inference</strong>. This isn’t a failing of the statistics literature so much as a failing of the naive popularization of new ideas (e.g.&nbsp;blog posts, low-quality papers). The process of statistical inference (for point estimation) only cares about estimating a parameter of a probability distribution and quantifying the sampling distribution of that estimate. There is nothing <em>causal</em> about that, and many are surprised to learn that the algorithms used for <em>causal</em> inference are actually identical to those used to make noncausal statements. What makes an analysis causal has little if anything to do with the estimator or algorithm used. It has everything to do with whether or not the researcher can satisfy certain non-testable assumptions about the process that generated the observed data. It’s important to keep these things (statistical inference and causal identification) separated in your mind even though they must always work together.</li>
-<li>The last and perhaps greatest shortcoming of traditional statistics pedagogy is that it generally does not teach you to ask the question that makes sense scientifically and then translate it into a statistical formalism. This is partly because, in the past, our analytic tools were quite limited and no progress could be made unless one imposed unrealistic assumptions or changed the question to fit the existing methods. Today, however, <strong>we have powerful tools that can then translate a given statistical problem into an optimal method for estimation</strong> in a wide variety of settings. It’s not always totally automatic, but at a minimum it provides a clear way to think about what’s better and what’s worse. It liberates you from the route if-this-kind-of-data-then-this-method thinking that only makes for bad statistics and bad science.</li>
+<li>The last and perhaps greatest shortcoming of traditional statistics pedagogy is that it generally does not teach you to ask the question that makes sense scientifically and <em>then</em> translate it into a statistical formalism. This is partly because, in the past, our analytic tools were quite limited and no progress could be made unless one imposed unrealistic assumptions or changed the question to fit the existing methods. Today, however, <strong>we have powerful tools that can then translate a given statistical problem into an optimal method for estimation</strong> in a wide variety of settings. It’s not always totally automatic, but at a minimum it provides a clear way to think about what’s better and what’s worse. It liberates you from the route if-this-kind-of-data-then-this-method thinking that only makes for bad statistics and bad science.</li>
 </ol>
 <p>Taken together, these three points give this movement a clear, unified, and increasingly popular perspective on causal inference. We have no doubt whatsoever that this is the paradigm that will come to dominate common practice in the next decades and century.</p>
-
-
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-van2011targeted" class="csl-entry" role="listitem">
-Van der Laan, Mark J, Sherri Rose, et al. 2011. <em>Targeted Learning: Causal Inference for Observational and Experimental Data</em>. Vol. 4. Springer.
-</div>
-</div>
 </section>
+<section id="pedagogy" class="level2">
+<h2 class="anchored" data-anchor-id="pedagogy">Pedagogy</h2>
+<p>The modern approach to causal inference is already well-established and discussed at length in many high-quality resources and courses. So why have yet another book going over the same material?</p>
+<p>Well, there are many different kinds of students with different backgrounds for whom different presentation styles work better! We’ve chosen an approach for this particular text that focuses on the following principles:</p>
+<ol type="1">
+<li><p><strong>Rigor with fewer prerequisites</strong>. Many students are turned off or intimidated by the amount of mathematical formality that is required to rigorously understand modern causal inference. While you don’t actually need a lot of math to use and understand the ideas, you do need <em>some</em> math to be able to work independently in the field. Since one of our goals is for you to be able to <em>construct your own</em> efficient estimator for a never-before-seen problem, we have to think precisely and not hand-wave away rigor.</p>
+<p>For better or worse, the math you need is built on several layers of prerequisites- real analysis, probability theory, functional analysis, and asymptotic statistics (more on that later). In an ideal world, we would all have taken these courses and be prepared for what’s next, but in practice we know many people have gaps in their knowledge.</p>
+<p>In this book we try to address that by providing a lot of foundational background information about these topics as they come up. We do our best to build up intuition for the component pieces of things before diving into implications. We lean heavily on figures and natural English prose to explain these concepts alongside the formal mathematical notation. At a minimum, we try to be very clear about what the foundations actually <em>are</em> so that if you don’t understand something you at least know where to look.</p></li>
+<li><p><strong>Core concepts</strong>. Modern causal inference is a huge field. There are so many exciting applications and theoretical developments that it can be hard for students to find their way at first.</p>
+<p>We’ve tried to keep thing as short and concise as possible in this book by focusing on core ideas and a limited number of examples. The point of this is to emphasize what is most important and to allow you to learn the fundamentals without getting distracted. That means there are many topics that aren’t covered in this book (see section below), but the idea is that this book will give you the tools and mindset you need in order to continue your learning productively.</p></li>
+<li><p><strong>A welcoming voice</strong>. Modern causal inference is fast-moving and intense. It’s easy to feel like you don’t belong or aren’t good enough to participate. The agnostic, impersonal tone that is best for writing a clear academic paper doesn’t always create the warm, emotional connection that is necessary for us to feel secure and ready to learn.</p>
+<p>To deal with that problem, the voice we use throughout this book is informal and decidedly nonacademic. We write in the first person and address you, the reader, directly. Figures are hand-drawn and cartoonish and we have links rather than formal citations. We provide personal commentary alongside agnostic technical material. All of this is deliberate and meant to help you feel comfortable and guided through this world. You are not alone in learning!</p></li>
+</ol>
+<p>Other books may share some or all of these principles to some extent so we’re not claiming that what we’ve done here is entirely unique. We’re trying to create as many inlets as possible for students with different lived experiences. If the approach we take here works for you, that’s great!</p>
+<p>If you find this book isn’t for you, that’s also great! Here is a list of other resources that cover some of the same ground:</p>
+<ul>
+<li><a href="https://arxiv.org/pdf/2203.06469.pdf"><em>Semiparametric Doubly Robust Targeted Double Machine Learning: A Review</em></a> <span class="citation" data-cites="kennedy2022semiparametric">(<a href="references.html#ref-kennedy2022semiparametric" role="doc-biblioref">Kennedy, 2022</a>)</span></li>
+<li><a href="https://link.springer.com/book/10.1007/0-387-37345-4"><em>Semiparametric Theory and Missing Data</em></a> <span class="citation" data-cites="tsiatis2006semiparametric">(<a href="references.html#ref-tsiatis2006semiparametric" role="doc-biblioref">Tsiatis, 2006</a>)</span></li>
+<li><a href="https://link.springer.com/book/10.1007/978-1-4419-9782-1"><em>Targeted Learning</em></a> <span class="citation" data-cites="van2011targeted">(<a href="references.html#ref-van2011targeted" role="doc-biblioref">Van der Laan et al., 2011</a>)</span></li>
+<li><a href="https://link.springer.com/book/10.1007/978-0-387-21700-0"><em>Unified Methods for Censored Longitudinal Data and Causality</em></a> <span class="citation" data-cites="laan2003unified">(<a href="references.html#ref-laan2003unified" role="doc-biblioref">Laan &amp; Robins, 2003</a>)</span></li>
+<li><a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"><em>Causal Inference: What If?</em></a> <span class="citation" data-cites="hernan2010causal">(<a href="references.html#ref-hernan2010causal" role="doc-biblioref">Hernán &amp; Robins, 2010</a>)</span></li>
+</ul>
+<section id="rigor-with-fewer-prerequisites" class="level3">
+<h3 class="anchored" data-anchor-id="rigor-with-fewer-prerequisites">Rigor with Fewer Prerequisites</h3>
+<p>Despite our best efforts, you will need some background material to get the most out of this book. The <em>hard</em> prerequisites listed are non-negotiable (this book will make no sense to you at all if you don’t know what a probability distribution is), but the <em>soft</em> prerequisites are completely optional. We don’t cover these topics here because there are already so many good resources to learn them and there’s no need to reinvent the wheel. We provide the curated references below so you know where to go to fill in the holes in your understanding as you go along.</p>
+<p><strong>Hard Prerequisites</strong> &nbsp; You’ll need to know probability theory at the undergraduate level. Random variables, expectation, conditional expectation, probability densities should be familiar to you, and ideally you have at least a vague understanding of what convergence in distribution means.</p>
+<p>You also need undergraduate multivariable calculus and linear algebra: integrals, derivatives, vectors, etc. should all be well-worn tools at your disposal.</p>
+<p>If you’re shaky on these topics, we recommend <a href="https://www.khanacademy.org/">Khan Academy</a>. We also encourage you to check out the real analysis and measure-theoretic probability resources listed below, which will provide you with a much more useful, conceptual understanding.</p>
+<p><strong>Soft Prerequisites</strong> &nbsp; The following topics aren’t necessary to grasp the arc of the arguments we’ll make, but a fully rigorous understanding isn’t possible without them. As we go along, we’ll provide parenthetical commentary to elucidate concepts from these subjects that you may not be familiar with. We suggest attempting to read and understand this book all the way through and taking notes on the places where you feel like you’re missing something. This will help you prioritize your time if you choose to fill in the gaps. None of this material is beyond you, we promise. It just takes a little time to work through it.</p>
+<p>These books and videos give what we think is the most self-contained treatment of their respective topics that is in line with the didactic approach taken in this book. They tend to have a more conversational tone, provide more background and intuition to the reader, and have plenty of worked examples. As always, however, there are many alternatives that may work better for you depending on your needs. These subjects should be tackled in the order they are listed here:</p>
+</section>
+<section id="core-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="core-concepts">Core Concepts</h3>
+</section>
+</section>
+</section>
+<section id="topics" class="level1 unnumbered">
+<h1 class="unnumbered">Topics</h1>
+</section>
+<section id="acknowledgements" class="level1 unnumbered">
+<h1 class="unnumbered">Acknowledgements</h1>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-hernan2010causal" class="csl-entry" role="listitem">
+Hernán, M. A., &amp; Robins, J. M. (2010). <em>Causal inference</em>. CRC Boca Raton, FL.
+</div>
+<div id="ref-kennedy2022semiparametric" class="csl-entry" role="listitem">
+Kennedy, E. H. (2022). Semiparametric doubly robust targeted double machine learning: A review. <em>arXiv Preprint arXiv:2203.06469</em>.
+</div>
+<div id="ref-laan2003unified" class="csl-entry" role="listitem">
+Laan, M. J., &amp; Robins, J. M. (2003). <em>Unified methods for censored longitudinal data and causality</em>. Springer.
+</div>
+<div id="ref-tsiatis2006semiparametric" class="csl-entry" role="listitem">
+Tsiatis, A. A. (2006). <em>Semiparametric theory and missing data</em>.
+</div>
+<div id="ref-van2011targeted" class="csl-entry" role="listitem">
+Van der Laan, M. J., Rose, S., et al. (2011). <em>Targeted learning: Causal inference for observational and experimental data</em> (Vol. 4). Springer.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
