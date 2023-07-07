@@ -51,7 +51,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./inference_and_statistics.html" rel="next">
+<link href="./chapters/inference_and_statistics.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,6 +81,8 @@ div.csl-indent {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -130,31 +132,31 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./inference_and_statistics.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapters/inference_and_statistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Inference and Statistics</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./causality_and_identification.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapters/causality_and_identification.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Causality and Identification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./efficiency_theory.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapters/efficiency_theory.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Efficiency Theory</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./building_efficient_estimators.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapters/building_efficient_estimators.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Building Efficient Estimators</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
+  <a href="./chapters/references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
@@ -209,7 +211,7 @@ div.csl-indent {
 
 </header>
 
-<p><img src="cover.png" title="Introduction to Modern Causal Inference" class="quarto-cover-image img-fluid"></p>
+<p><img src="artwork/cover.png" title="Introduction to Modern Causal Inference" class="quarto-cover-image img-fluid"></p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -226,7 +228,7 @@ div.csl-indent {
 <section id="goals-and-approach" class="level1 unnumbered">
 <h1 class="unnumbered">Goals and Approach</h1>
 <p>Our goal is to get people with any amount of experience in formal mathematics past undergraduate probability to be able to take a vaguely-defined scientific question, translate it into a formal statistical problem, and solve it by constructing a tool that is optimal for the job at hand.</p>
-<p>This book is not particularly original! There are many texts and courses that share the same philosophy and have substantial overlap in terms of the pedagogic approach and topics. In particular, we owe a lot to the biostatistics curriculum at UC Berkeley and to more encyclopedic texts like <span class="citation" data-cites="van2011targeted">Van der Laan et al. (<a href="references.html#ref-van2011targeted" role="doc-biblioref">2011</a>)</span>. Nonetheless, we think that the particular selection of topics and tone in this book will make the content accessible enough to new audiences that it’s worthwhile to recombine the material in this way. Think of this book as just another open window into the exciting world of modern causal inference.</p>
+<p>This book is not particularly original! There are many texts and courses that share the same philosophy and have substantial overlap in terms of the pedagogic approach and topics. In particular, we owe a lot to the biostatistics curriculum at UC Berkeley and to more encyclopedic texts like <span class="citation" data-cites="van2011targeted">Van der Laan et al. (<a href="chapters/references.html#ref-van2011targeted" role="doc-biblioref">2011</a>)</span>. Nonetheless, we think that the particular selection of topics and tone in this book will make the content accessible enough to new audiences that it’s worthwhile to recombine the material in this way. Think of this book as just another open window into the exciting world of modern causal inference.</p>
 <section id="philosophy" class="level2">
 <h2 class="anchored" data-anchor-id="philosophy">Philosophy</h2>
 <p>This book is rooted in the philosophy of modern causal inference. What sets this philosophy apart are the three following tenets:</p>
@@ -253,11 +255,11 @@ div.csl-indent {
 <p>Other books may share some or all of these principles to some extent so we’re not claiming that what we’ve done here is entirely unique. We’re trying to create as many inlets as possible for students with different lived experiences. If the approach we take here works for you, that’s great!</p>
 <p>If you find this book isn’t for you, that’s also great! Here is a list of other resources that cover some of the same ground:</p>
 <ul>
-<li><a href="https://arxiv.org/pdf/2203.06469.pdf"><em>Semiparametric Doubly Robust Targeted Double Machine Learning: A Review</em></a> <span class="citation" data-cites="kennedy2022semiparametric">(<a href="references.html#ref-kennedy2022semiparametric" role="doc-biblioref">Kennedy, 2022</a>)</span></li>
-<li><a href="https://link.springer.com/book/10.1007/0-387-37345-4"><em>Semiparametric Theory and Missing Data</em></a> <span class="citation" data-cites="tsiatis2006semiparametric">(<a href="references.html#ref-tsiatis2006semiparametric" role="doc-biblioref">Tsiatis, 2006</a>)</span></li>
-<li><a href="https://link.springer.com/book/10.1007/978-1-4419-9782-1"><em>Targeted Learning</em></a> <span class="citation" data-cites="van2011targeted">(<a href="references.html#ref-van2011targeted" role="doc-biblioref">Van der Laan et al., 2011</a>)</span></li>
-<li><a href="https://link.springer.com/book/10.1007/978-0-387-21700-0"><em>Unified Methods for Censored Longitudinal Data and Causality</em></a> <span class="citation" data-cites="laan2003unified">(<a href="references.html#ref-laan2003unified" role="doc-biblioref">Laan &amp; Robins, 2003</a>)</span></li>
-<li><a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"><em>Causal Inference: What If?</em></a> <span class="citation" data-cites="hernan2010causal">(<a href="references.html#ref-hernan2010causal" role="doc-biblioref">Hernán &amp; Robins, 2010</a>)</span></li>
+<li><a href="https://arxiv.org/pdf/2203.06469.pdf"><em>Semiparametric Doubly Robust Targeted Double Machine Learning: A Review</em></a> <span class="citation" data-cites="kennedy2022semiparametric">(<a href="chapters/references.html#ref-kennedy2022semiparametric" role="doc-biblioref">Kennedy, 2022</a>)</span></li>
+<li><a href="https://link.springer.com/book/10.1007/0-387-37345-4"><em>Semiparametric Theory and Missing Data</em></a> <span class="citation" data-cites="tsiatis2006semiparametric">(<a href="chapters/references.html#ref-tsiatis2006semiparametric" role="doc-biblioref">Tsiatis, 2006</a>)</span></li>
+<li><a href="https://link.springer.com/book/10.1007/978-1-4419-9782-1"><em>Targeted Learning</em></a> <span class="citation" data-cites="van2011targeted">(<a href="chapters/references.html#ref-van2011targeted" role="doc-biblioref">Van der Laan et al., 2011</a>)</span></li>
+<li><a href="https://link.springer.com/book/10.1007/978-0-387-21700-0"><em>Unified Methods for Censored Longitudinal Data and Causality</em></a> <span class="citation" data-cites="laan2003unified">(<a href="chapters/references.html#ref-laan2003unified" role="doc-biblioref">Laan &amp; Robins, 2003</a>)</span></li>
+<li><a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"><em>Causal Inference: What If?</em></a> <span class="citation" data-cites="hernan2010causal">(<a href="chapters/references.html#ref-hernan2010causal" role="doc-biblioref">Hernán &amp; Robins, 2010</a>)</span></li>
 </ul>
 <section id="rigor-with-fewer-prerequisites" class="level3">
 <h3 class="anchored" data-anchor-id="rigor-with-fewer-prerequisites">Rigor with Fewer Prerequisites</h3>
@@ -267,34 +269,94 @@ div.csl-indent {
 <p>If you’re shaky on these topics, we recommend <a href="https://www.khanacademy.org/">Khan Academy</a>. We also encourage you to check out the real analysis and measure-theoretic probability resources listed below, which will provide you with a much more useful, conceptual understanding.</p>
 <p><strong>Soft Prerequisites</strong> &nbsp; The following topics aren’t necessary to grasp the arc of the arguments we’ll make, but a fully rigorous understanding isn’t possible without them. As we go along, we’ll provide parenthetical commentary to elucidate concepts from these subjects that you may not be familiar with. We suggest attempting to read and understand this book all the way through and taking notes on the places where you feel like you’re missing something. This will help you prioritize your time if you choose to fill in the gaps. None of this material is beyond you, we promise. It just takes a little time to work through it.</p>
 <p>These books and videos give what we think is the most self-contained treatment of their respective topics that is in line with the didactic approach taken in this book. They tend to have a more conversational tone, provide more background and intuition to the reader, and have plenty of worked examples. As always, however, there are many alternatives that may work better for you depending on your needs. These subjects should be tackled in the order they are listed here:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Field</th>
+<th>Topics to Focus On</th>
+<th>Resources</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Intro to Real Analysis</td>
+<td>sequences, limits, series, continuity, convergence (pointwise, uniform), derivative</td>
+<td><a href="https://link.springer.com/book/10.1007/978-1-4939-2712-8">Understanding Analysis</a> (Ch 1-6) <span class="citation" data-cites="abbott2015understanding">(<a href="chapters/references.html#ref-abbott2015understanding" role="doc-biblioref">Abbott, 2015</a>)</span></td>
+</tr>
+<tr class="even">
+<td>Measure-Theoretic Probability</td>
+<td>definition and construction of measure, Lebesgue integral and its properties, Radon-Nikodym theorem, change-of-variables formula, modes of convergence for random variables, independence, central limit theorem, conditional expectation</td>
+<td><a href="https://www.youtube.com/playlist?list=PLo4jXE-LdDTQq8ZyA8F8reSQHej3F6RFX">Measure Theory YouTube Lectures</a> - Landim <br> <a href="https://link.springer.com/book/10.1007/978-1-4471-0645-6">Measure, Integral, and Probability</a> <span class="citation" data-cites="capinski2004measure">(<a href="chapters/references.html#ref-capinski2004measure" role="doc-biblioref">Capiński &amp; Kopp, 2004</a>)</span></td>
+</tr>
+<tr class="odd">
+<td>Functional Analysis in <span class="math inline">\(\mathscr{L}_2\)</span></td>
+<td>projection, bounded dual space, Reisz representation</td>
+<td><a href="https://www.wiley.com/en-us/Introductory Functional Analysis with Applications-p-9780471504597">Introductory Functional Analysis with Applications</a> (Ch 1-3) <span class="citation" data-cites="kreyszig1991introductory">(<a href="chapters/references.html#ref-kreyszig1991introductory" role="doc-biblioref">Kreyszig, 1991</a>)</span></td>
+</tr>
+</tbody>
+</table>
+<p>A few tips for self study: we recommend reading skimming each chapter first and getting an idea of what the main ideas are and how they interconnect to each other and to what you’ve already done. Take your time to understand what the definitions of the objects are that are used in each theorem (e.g.&nbsp;what exactly is a sequence / random variable / linear bounded functional?). Think of some examples and draw pictures.</p>
+<p>Then go through the chapter again and read it slowly, line by line. Reading a line of math should take you as long as it takes to read a paragraph of English because that’s often how much information is conveyed therein. Now draw some pictures or think of examples attempting the illustrate the content of the theorems. After you’re done, do several of the exercises that the author provides. We’ve found that it also helps to make a <em>one-page summary</em> or <em>cheatsheet</em> of all the material in the chapter (definitions, important theorems, and their relationships). This will help you keep all the concepts organized as you go along.</p>
+<p>We’ll also refer to <a href="https://www.cambridge.org/core/books/asymptotic-statistics/A3C7DAD3F7E66A1FA60E9C8FE132EE1D">Asymptotic Statistics</a> <span class="citation" data-cites="van2000asymptotic">(<a href="chapters/references.html#ref-van2000asymptotic" role="doc-biblioref">Van der Vaart, 2000</a>)</span> in certain places throughout the guide where we need to point to technical material. When we do this, we’ll cite it as <em>vdV 98</em>. Relative to the way we write things up here, <em>vdV 98</em> goes over background material much faster, so you may find it more challenging to read through. However, it does contain all the necessary information and details. If you’ve read the material in the table above and you’re feeling up to it you can try your hand at ch.&nbsp;1, 2, 6, 7, 8, and 25 of that book.</p>
 </section>
 <section id="core-concepts" class="level3">
 <h3 class="anchored" data-anchor-id="core-concepts">Core Concepts</h3>
+<p>We’ve done our best to keep this book lean and targeted on foundational concepts. As a consequence, there are many important and interesting topics that we’ll say nothing or little about. For the sake of completeness, we’ll list some of them here so you know where to start looking when you’re ready to build on your solid foundation.</p>
+<p>To keep things simple and consistent, most of the examples in this book focus on inference of the average treatment effect in simple covariate-treatment-outcome observational or randomized studies. However, there are many data structures which are much more elaborate than this. For example, we do not fully discuss inference in longitudinal settings with time-varying covariates and treatments, inference when some outcomes are censored, stochastic interventions, or continuous treatments. Non-IID data (e.g.&nbsp;treatment spillover in a network) is another interesting topic that is not covered. Nonetheless, what is in this book will prepare you to study all of these topics and to understand them as special cases or extensions of the general approach presented here.</p>
+<p>While the tools we describe in this book are extremely powerful, they are not <em>all</em>-powerful. Some estimands of legitimate interest are not <em>pathwise differentiable</em> and therefore cannot be analyzed with these tools. An important example of such an estimand is the conditional average treatment effect, which is the subject of extensive research. There is not yet a unified approach to these problems.</p>
+<p>Another interesting and useful setting that we do not discuss is online (or reinforcement) learning. Many topics related to this literature (e.g., off-policy evaluation) are directly addressable with the methods in this book, but here we omit all discussion of scenarios where the treatment policy can be manipulated during data collection as more information comes in. The framework for causal inference we develop in this book does extend to such settings but only with some added complexity that is best understood after learning the basics.</p>
+<p>Lastly, the reader should be aware that this book discusses the most popular and widely used framework for causal inference, which is that of potential outcomes in the frequentist population model. Readers may have heard of directed acyclic graphs (DAGs) as an alternative to potential outcomes, but these two frameworks are in fact equivalent and easily unified <span class="citation" data-cites="richardson2013single">(<a href="chapters/references.html#ref-richardson2013single" role="doc-biblioref">Richardson &amp; Robins, 2013</a>)</span>. Alternatives are exceedingly rare. Potential outcomes are also used outside the population model in the randomization inference framework, which differs in that only the treatment assignment is assumed to be random (i.e., sampling from a larger population is a source of variability). Much of what you learn here is also applicable to randomization inference. Potential outcomes are also commonly used in Bayesian approaches to causal inference, which we don’t discuss here.</p>
 </section>
 </section>
 </section>
 <section id="topics" class="level1 unnumbered">
 <h1 class="unnumbered">Topics</h1>
+<p>This book aims to be a relatively self-contained treatment of the modern approach to causal inference. As we said above, the goal is for you to be able to take a vaguely-defined scientific question, translate it into a formal statistical problem, and solve it using a tool that you optimally construct for the job at hand. Thankfully, there’s a well-developed process for doing that called the <em>Statistical Roadmap</em> <span class="citation" data-cites="petersen2014causal">(<a href="chapters/references.html#ref-petersen2014causal" role="doc-biblioref">Petersen &amp; Laan, 2014</a>)</span> which we follow closely in the chapters of this book:</p>
+<ol type="1">
+<li>To begin with, we need to first understand the process of <strong><em>statistical inference</em></strong>. We do that by defining a set of assumptions that represent what we know is true about the real world along with some true quantity of interest. Only then do we propose some kind of method or algorithm that, given data, produces an estimate of this quantity. We should be able to show that, with enough data, our answer gets closer and closer to the truth and that we have some way to quantify the uncertainty due to random sampling. These are the topics we’ll work through in <a href="chapters/inference_and_statistics.html" class="quarto-xref">Chapter&nbsp;<span>1</span></a>, closing out with an example that illustrates the danger of blindly applying popular methods without thinking through the question and assumptions.</li>
+<li>Once we’ve understood the goal and process of inference, we introduce causality. Causal inference questions are just statistical inference questions but in an imaginary world where we can always observe the result of alternative <em>what if</em>’s. Of course in the real world we can’t see all the <em>what if</em>’s. We only get to see what happened, not what <em>could</em> have happened had we made a different choice, taken a different drug, or implemented a different policy. To link the two worlds together we have to make some assumptions to guarantee that the answer to a statistical inference problem in the real world actually represents the answer to our causal question in the world of <em>what if</em>’s. <a href="chapters/causality_and_identification.html" class="quarto-xref">Chapter&nbsp;<span>2</span></a> lays out this process (<strong><em>causal identification</em></strong>) and gives examples. <a href="chapters/causality_and_identification.html" class="quarto-xref">Chapter&nbsp;<span>2</span></a> also addresses why a well-defined intervention is important to formulating something as a causal question and discusses broadly applicable methods that quantify the impact of potentially erroneous identifying assumptions.</li>
+<li>Once we have an identification result in hand, we are completely done with causality and can focus on solving the real-world inference problem. But for better or for worse there are thousands of inference methods, each of which work under different assumptions and target different parameters. Choosing among these is daunting and often puts the cart before the horse because we’re forced to define our question such that an existing method can solve it. <a href="chapters/efficiency_theory.html" class="quarto-xref">Chapter&nbsp;<span>3</span></a> lays the foundation to address this problem by showing that for a wide range of assumptions and questions, there is generally a way to quantify what the best possible estimator is in terms of the <strong><em>efficient influence function</em></strong>. The efficient influence function completely describes the behavior of the optimal estimator in large samples. This optimal estimator always converges to the right answer with more data and has the lowest legitimate uncertainty possible under the given assumptions. We work through examples of deriving efficient influence functions for the average treatment effect in standard observational and randomized experiments.</li>
+<li>Finally, <a href="chapters/building_efficient_estimators.html" class="quarto-xref">Chapter&nbsp;<span>4</span></a> does the hard work of putting the theory from <a href="chapters/efficiency_theory.html" class="quarto-xref">Chapter&nbsp;<span>3</span></a> into practice. Here we show how we can actually build an <strong><em>efficient estimator</em></strong>- one which has the efficient influence function. In other words, given a statistical problem, we can construct an optimal method to solve it. We outline the three main strategies for doing this, which are called bias-correction, estimating equations, and targeted maximum likelihood. We show the different ways in which these strategies ensure that the constructed estimator has the right behavior. All of them ultimately attain the same goal and are theoretically equivalent in large-enough samples, but the differences are relevant for how the constructed estimators perform in practice.</li>
+</ol>
 </section>
 <section id="acknowledgements" class="level1 unnumbered">
 <h1 class="unnumbered">Acknowledgements</h1>
+<p>The authors thank Lauren Liao and Kat Hoffman for productive comments on chapter drafts.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-abbott2015understanding" class="csl-entry" role="listitem">
+Abbott, S. (2015). <em>Understanding analysis</em>. Springer.
+</div>
+<div id="ref-capinski2004measure" class="csl-entry" role="listitem">
+Capiński, M., &amp; Kopp, P. E. (2004). <em>Measure, integral and probability</em> (Vol. 14). Springer.
+</div>
 <div id="ref-hernan2010causal" class="csl-entry" role="listitem">
 Hernán, M. A., &amp; Robins, J. M. (2010). <em>Causal inference</em>. CRC Boca Raton, FL.
 </div>
 <div id="ref-kennedy2022semiparametric" class="csl-entry" role="listitem">
 Kennedy, E. H. (2022). Semiparametric doubly robust targeted double machine learning: A review. <em>arXiv Preprint arXiv:2203.06469</em>.
 </div>
+<div id="ref-kreyszig1991introductory" class="csl-entry" role="listitem">
+Kreyszig, E. (1991). <em>Introductory functional analysis with applications</em> (Vol. 17). John Wiley &amp; Sons.
+</div>
 <div id="ref-laan2003unified" class="csl-entry" role="listitem">
 Laan, M. J., &amp; Robins, J. M. (2003). <em>Unified methods for censored longitudinal data and causality</em>. Springer.
+</div>
+<div id="ref-petersen2014causal" class="csl-entry" role="listitem">
+Petersen, M. L., &amp; Laan, M. J. van der. (2014). Causal models and learning from data: Integrating causal modeling and statistical estimation. <em>Epidemiology (Cambridge, Mass.)</em>, <em>25</em>(3), 418.
+</div>
+<div id="ref-richardson2013single" class="csl-entry" role="listitem">
+Richardson, T. S., &amp; Robins, J. M. (2013). Single world intervention graphs (SWIGs): A unification of the counterfactual and graphical approaches to causality. <em>Center for the Statistics and the Social Sciences, University of Washington Series. Working Paper</em>, <em>128</em>(30), 2013.
 </div>
 <div id="ref-tsiatis2006semiparametric" class="csl-entry" role="listitem">
 Tsiatis, A. A. (2006). <em>Semiparametric theory and missing data</em>.
 </div>
 <div id="ref-van2011targeted" class="csl-entry" role="listitem">
 Van der Laan, M. J., Rose, S., et al. (2011). <em>Targeted learning: Causal inference for observational and experimental data</em> (Vol. 4). Springer.
+</div>
+<div id="ref-van2000asymptotic" class="csl-entry" role="listitem">
+Van der Vaart, A. W. (2000). <em>Asymptotic statistics</em> (Vol. 3). Cambridge university press.
 </div>
 </div>
 </section>
@@ -537,7 +599,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./inference_and_statistics.html" class="pagination-link">
+      <a href="./chapters/inference_and_statistics.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Inference and Statistics</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

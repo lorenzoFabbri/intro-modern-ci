@@ -1,0 +1,9 @@
+```{r}
+#| echo: false
+#| out.width: NULL
+
+knitr::include_graphics("../artwork/cover_ch1.png", 
+                        dpi = 270)
+```
+
+# Inference and Statistics {#sec-ch1}

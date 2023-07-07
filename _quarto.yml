@@ -9,14 +9,14 @@ book:
   search: true
   downloads: [pdf]
   sharing: [twitter]
-  cover-image: cover.png
+  cover-image: artwork/cover.png
   chapters:
     - index.qmd
-    - inference_and_statistics.qmd
-    - causality_and_identification.qmd
-    - efficiency_theory.qmd
-    - building_efficient_estimators.qmd
-    - references.qmd
+    - chapters/inference_and_statistics.qmd
+    - chapters/causality_and_identification.qmd
+    - chapters/efficiency_theory.qmd
+    - chapters/building_efficient_estimators.qmd
+    - chapters/references.qmd
   page-navigation: true
 
 bibliography: references.bib
